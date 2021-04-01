@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://newtype0096.github.io/"/>
-  <updated>2020-12-08T09:27:52.660Z</updated>
+  <updated>2021-04-01T15:49:41.323Z</updated>
   <id>http://newtype0096.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows 환경에서 FFmpeg 컴파일하기 (MSVC)</title>
+    <link href="http://newtype0096.github.io/2021/04/01/Windows-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C-FFmpeg-%EC%BB%B4%ED%8C%8C%EC%9D%BC%ED%95%98%EA%B8%B0-MSVC/"/>
+    <id>http://newtype0096.github.io/2021/04/01/Windows-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C-FFmpeg-%EC%BB%B4%ED%8C%8C%EC%9D%BC%ED%95%98%EA%B8%B0-MSVC/</id>
+    <published>2021-04-01T13:44:07.000Z</published>
+    <updated>2021-04-01T15:49:41.323Z</updated>
+    
+    <content type="html"><![CDATA[<p>Windows 환경에서 FFmpeg을 빌드하는 방법에 대해서 알아보도록 하겠습니다.</p><p>출처: <a href="https://www.roxlu.com/2019/062/compiling-ffmpeg-with-x264-on-windows-10-using-msvc" target="_blank" rel="noopener">Compiling FFmpeg with X264 on Windows 10 using MSVC</a></p><h2 id="MSYS2-설치하기"><a href="#MSYS2-설치하기" class="headerlink" title="MSYS2 설치하기"></a>MSYS2 설치하기</h2><ol><li><a href="https://www.msys2.org/" target="_blank" rel="noopener">MSYS2</a> 인스톨러를 다운로드 후 실행합니다.</li><li>C:\msys64 경로에 설치합니다.</li></ol><p><img src="/image/msys2/MSYS2_64bit_Setup.png" alt="MSYS2 설치"></p><ol start="3"><li><code>x64 Native Tools Command Prompt for VS xxxx</code>를 실행합니다.</li></ol><p><img src="/image/visualstudio/startmenu_x64_native_tools_command_prompt_for_vs_2019.png" alt="시작 메뉴 - x64 Native Tools Command Prompt for VS xxxx"></p><ol start="4"><li><code>C:\msys64\msys2_shell.cmd</code>를 입력합니다.</li></ol><p><img src="/image/visualstudio/msys2_shell.cmd.png" alt="C:\msys64\msys2_shell.cmd"></p><ol start="5"><li><code>MSYS2 쉘</code>에 다음 명령어를 입력하여 필요 패키지를 설치합니다.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ pacman -Syu</span><br><span class="line">$ pacman -S make</span><br><span class="line">$ pacman -S diffutils</span><br><span class="line">$ pacman -S yasm</span><br><span class="line">$ pacman -S nasm</span><br><span class="line">$ pacman -S git</span><br></pre></td></tr></table></figure></li><li>MSYS2의 link.exe를 백업합니다. (MSVC의 link.exe와 충돌 방지)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mv &#x2F;usr&#x2F;bin&#x2F;link.exe &#x2F;usr&#x2F;bin&#x2F;link.exe.bak</span><br></pre></td></tr></table></figure></li></ol><h2 id="FFmpeg-소스-가져오기"><a href="#FFmpeg-소스-가져오기" class="headerlink" title="FFmpeg 소스 가져오기"></a>FFmpeg 소스 가져오기</h2><p>다음 명령어를 입력하여 <code>FFmpeg 소스</code>를 가져옵니다.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir tmp</span><br><span class="line">$ cd tmp</span><br><span class="line">$ mkdir sources</span><br><span class="line">$ mkdir build</span><br><span class="line">$ cd sources</span><br><span class="line"></span><br><span class="line">$ git clone --depth 1 git:&#x2F;&#x2F;source.ffmpeg.org&#x2F;ffmpeg.git</span><br></pre></td></tr></table></figure><h2 id="FFmpeg-컴파일하기"><a href="#FFmpeg-컴파일하기" class="headerlink" title="FFmpeg 컴파일하기"></a>FFmpeg 컴파일하기</h2><ol><li>실행중인 <code>MSYS2 쉘</code>을 종료합니다. </li><li><code>x64 Native Tools Command Prompt for VS xxxx</code>을 종료 후 재실행합니다.</li><li><code>C:\msys64\msys2_shell.cmd -use-full-path</code>을 입력합니다.</li></ol><p><img src="/image/visualstudio/msys2_shell_use_full_path.cmd.png" alt="C:\msys64\msys2_shell.cmd -use-full-path"></p><ol start="4"><li>다음 명령어를 입력합니다.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ cd tmp&#x2F;build</span><br><span class="line">$ mkdir ffmpeg</span><br><span class="line">$ cd ffmpeg</span><br><span class="line"></span><br><span class="line">$ CC&#x3D;cl .&#x2F;..&#x2F;..&#x2F;sources&#x2F;ffmpeg&#x2F;configure --prefix&#x3D;.&#x2F;..&#x2F;..&#x2F;installed --toolchain&#x3D;msvc --arch&#x3D;x86_64 --enable-yasm --enable-asm --enable-shared --disable-static --disable-programs --enable-avresample --enable-gpl  --extra-ldflags&#x3D;&quot;-LIBPATH:.&#x2F;..&#x2F;..&#x2F;installed&#x2F;lib&quot; --extra-cflags&#x3D;&quot;-I.&#x2F;..&#x2F;..&#x2F;installed&#x2F;include&#x2F;&quot;</span><br><span class="line"></span><br><span class="line">$ make V&#x3D;1 -j 8</span><br><span class="line">$ make install</span><br></pre></td></tr></table></figure></li></ol><h2 id="결과-확인하기"><a href="#결과-확인하기" class="headerlink" title="결과 확인하기"></a>결과 확인하기</h2><p>C:\msys64\home\계정\tmp\installed\bin 경로에서 컴파일 결과를 확인합니다.</p><p><img src="/image/ffmpeg/ffmpeg_bin.png" alt="ffmpeg-bin"></p><p>Windows 환경에서 FFmpeg을 빌드하는 방법에 대해서 알아보았습니다.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Windows 환경에서 FFmpeg을 빌드하는 방법에 대해서 알아보도록 하겠습니다.&lt;/p&gt;
+&lt;p&gt;출처: &lt;a href=&quot;https://www.roxlu.com/2019/062/compiling-ffmpeg-with-x264-on-windows-1
+      
+    
+    </summary>
+    
+    
+      <category term="Open Source" scheme="http://newtype0096.github.io/categories/Open-Source/"/>
+    
+      <category term="FFmpeg" scheme="http://newtype0096.github.io/categories/Open-Source/FFmpeg/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Windows 환경에서 SSL/TLS를 지원하는 wsdl2h.exe 빌드하기</title>

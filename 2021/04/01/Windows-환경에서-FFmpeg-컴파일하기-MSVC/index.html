@@ -6,25 +6,31 @@
     
 
     
-    <title>Archive: 2020/3 | M-AHHH&#39;s Blog</title>
+    <title>Windows 환경에서 FFmpeg 컴파일하기 (MSVC) | M-AHHH&#39;s Blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
+    <meta name="keywords" content="" />
+    
 	
 	
-		<meta name="description" content="M-AHHH&#39;s Blog (Knowledge must be shared)">
-<meta property="og:type" content="website">
-<meta property="og:title" content="M-AHHH&#39;s Blog">
-<meta property="og:url" content="http://newtype0096.github.io/archives/2020/03/index.html">
+		<meta name="description" content="Windows 환경에서 FFmpeg을 빌드하는 방법에 대해서 알아보도록 하겠습니다. 출처: Compiling FFmpeg with X264 on Windows 10 using MSVC MSYS2 설치하기 MSYS2 인스톨러를 다운로드 후 실행합니다. C:\msys64 경로에 설치합니다.    x64 Native Tools Command Prompt for">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows 환경에서 FFmpeg 컴파일하기 (MSVC)">
+<meta property="og:url" content="http://newtype0096.github.io/2021/04/01/Windows-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C-FFmpeg-%EC%BB%B4%ED%8C%8C%EC%9D%BC%ED%95%98%EA%B8%B0-MSVC/index.html">
 <meta property="og:site_name" content="M-AHHH&#39;s Blog">
-<meta property="og:description" content="M-AHHH&#39;s Blog (Knowledge must be shared)">
+<meta property="og:description" content="Windows 환경에서 FFmpeg을 빌드하는 방법에 대해서 알아보도록 하겠습니다. 출처: Compiling FFmpeg with X264 on Windows 10 using MSVC MSYS2 설치하기 MSYS2 인스톨러를 다운로드 후 실행합니다. C:\msys64 경로에 설치합니다.    x64 Native Tools Command Prompt for">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://newtype0096.github.io/image/msys2/MSYS2_64bit_Setup.png">
+<meta property="article:published_time" content="2021-04-01T13:44:07.000Z">
+<meta property="article:modified_time" content="2021-04-01T15:49:41.323Z">
 <meta property="article:author" content="M-AHHH">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://newtype0096.github.io/image/msys2/MSYS2_64bit_Setup.png">
 	
 	
     
-	<link rel="canonical" href="http://newtype0096.github.io/archives/2020/03/"/>
+	<link rel="canonical" href="http://newtype0096.github.io/2021/04/01/windows-환경에서-ffmpeg-컴파일하기-msvc/"/>
 
     
 
@@ -174,123 +180,194 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-archive"></i>Archive: 2020/3
+    <a class="page-title-link" href="/categories/Open-Source/">Open Source</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Open-Source/FFmpeg/">FFmpeg</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-Windows-환경에서-FFmpeg-컴파일하기-MSVC" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2020" class="archive-year"><i class="icon fa fa-calendar-o"></i>2020</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2020/03/08/Windows-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C-SSL-TLS%EB%A5%BC-%EC%A7%80%EC%9B%90%ED%95%98%EB%8A%94-wsdl2h-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/image/wsdl2h/wsdl2h_dwith_openssl.png)" alt="Windows 환경에서 SSL/TLS를 지원하는 wsdl2h.exe 빌드하기" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://newtype0096.github.io/2020/03/08/Windows-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C-SSL-TLS%EB%A5%BC-%EC%A7%80%EC%9B%90%ED%95%98%EB%8A%94-wsdl2h-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Open-Source/">Open Source</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Open-Source/gSOAP/">gSOAP</a>
-            </div>
-            <div class="date"><time datetime="2020-03-08T12:59:00.000Z" itemprop="datePublished">2020-03-08</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2020/03/08/Windows-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C-SSL-TLS%EB%A5%BC-%EC%A7%80%EC%9B%90%ED%95%98%EB%8A%94-wsdl2h-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0/">Windows 환경에서 SSL/TLS를 지원하는 wsdl2h.exe 빌드하기</a>
+        Windows 환경에서 FFmpeg 컴파일하기 (MSVC)
         </h1>
     
 
-        <p class="article-excerpt">
-            gSOAP를 설치 후, wsdl2h.exe를 이용하여 https경로의 WSDL을 C / C++ 소스 코드로의 변환을 시도하면 아래의 오류를 마주하게 됩니다.
-Cannot connect to https site: SSL/TLS support not enabled in this version. Visit https://www.genivia.com/downloa
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+      <i class="fa fa-calendar"></i>
+      <a href="/2021/04/01/Windows-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C-FFmpeg-%EC%BB%B4%ED%8C%8C%EC%9D%BC%ED%95%98%EA%B8%B0-MSVC/" class="article-date">
+         <time datetime="2021-04-01T13:44:07.000Z" itemprop="datePublished">2021-04-01</time>
+      </a>
     </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2020/03/08/Windows-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C-OpenSSL-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/image/openssl/OpenSSL_logo.png)" alt="Windows 환경에서 OpenSSL 설치하기" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://newtype0096.github.io/2020/03/08/Windows-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C-OpenSSL-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/">0</span>
-    
-</span>
 
 
-    
-</a>
+                
 
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Open-Source/">Open Source</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Open-Source/OpenSSL/">OpenSSL</a>
+                
+                
+
+                
+
             </div>
-            <div class="date"><time datetime="2020-03-08T07:38:44.000Z" itemprop="datePublished">2020-03-08</time></div>
-        </div>
         
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2020/03/08/Windows-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C-OpenSSL-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/">Windows 환경에서 OpenSSL 설치하기</a>
-        </h1>
-    
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>Windows 환경에서 FFmpeg을 빌드하는 방법에 대해서 알아보도록 하겠습니다.</p>
+<p>출처: <a href="https://www.roxlu.com/2019/062/compiling-ffmpeg-with-x264-on-windows-10-using-msvc" target="_blank" rel="noopener">Compiling FFmpeg with X264 on Windows 10 using MSVC</a></p>
+<h2 id="MSYS2-설치하기"><a href="#MSYS2-설치하기" class="headerlink" title="MSYS2 설치하기"></a>MSYS2 설치하기</h2><ol>
+<li><a href="https://www.msys2.org/" target="_blank" rel="noopener">MSYS2</a> 인스톨러를 다운로드 후 실행합니다.</li>
+<li>C:\msys64 경로에 설치합니다.</li>
+</ol>
+<p><img src="/image/msys2/MSYS2_64bit_Setup.png" alt="MSYS2 설치"></p>
+<ol start="3">
+<li><code>x64 Native Tools Command Prompt for VS xxxx</code>를 실행합니다.</li>
+</ol>
+<p><img src="/image/visualstudio/startmenu_x64_native_tools_command_prompt_for_vs_2019.png" alt="시작 메뉴 - x64 Native Tools Command Prompt for VS xxxx"></p>
+<ol start="4">
+<li><code>C:\msys64\msys2_shell.cmd</code>를 입력합니다.</li>
+</ol>
+<p><img src="/image/visualstudio/msys2_shell.cmd.png" alt="C:\msys64\msys2_shell.cmd"></p>
+<ol start="5">
+<li><code>MSYS2 쉘</code>에 다음 명령어를 입력하여 필요 패키지를 설치합니다.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ pacman -Syu</span><br><span class="line">$ pacman -S make</span><br><span class="line">$ pacman -S diffutils</span><br><span class="line">$ pacman -S yasm</span><br><span class="line">$ pacman -S nasm</span><br><span class="line">$ pacman -S git</span><br></pre></td></tr></table></figure></li>
+<li>MSYS2의 link.exe를 백업합니다. (MSVC의 link.exe와 충돌 방지)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mv &#x2F;usr&#x2F;bin&#x2F;link.exe &#x2F;usr&#x2F;bin&#x2F;link.exe.bak</span><br></pre></td></tr></table></figure>
 
-        <p class="article-excerpt">
-            Windows 환경에서 OpenSSL을 설치하는 방법에 대해서 알아보도록 하겠습니다.
-OpenSSL
-OpenSSL은 네트워크를 통한 데이터 통신에 쓰이는 프로토콜인 TLS와 SSL의 오픈 소스 구현판이다. C 언어로 작성되어 있는 중심 라이브러리 안에는, 기본적인 암호화 기능 및 여러 유틸리티 함수들이 구현되어 있다.
-OpenSSL은 Eric A. Youn
-        </p>
-    </div>
-</article>
-    
+</li>
+</ol>
+<h2 id="FFmpeg-소스-가져오기"><a href="#FFmpeg-소스-가져오기" class="headerlink" title="FFmpeg 소스 가져오기"></a>FFmpeg 소스 가져오기</h2><p>다음 명령어를 입력하여 <code>FFmpeg 소스</code>를 가져옵니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir tmp</span><br><span class="line">$ cd tmp</span><br><span class="line">$ mkdir sources</span><br><span class="line">$ mkdir build</span><br><span class="line">$ cd sources</span><br><span class="line"></span><br><span class="line">$ git clone --depth 1 git:&#x2F;&#x2F;source.ffmpeg.org&#x2F;ffmpeg.git</span><br></pre></td></tr></table></figure>
+
+<h2 id="FFmpeg-컴파일하기"><a href="#FFmpeg-컴파일하기" class="headerlink" title="FFmpeg 컴파일하기"></a>FFmpeg 컴파일하기</h2><ol>
+<li>실행중인 <code>MSYS2 쉘</code>을 종료합니다. </li>
+<li><code>x64 Native Tools Command Prompt for VS xxxx</code>을 종료 후 재실행합니다.</li>
+<li><code>C:\msys64\msys2_shell.cmd -use-full-path</code>을 입력합니다.</li>
+</ol>
+<p><img src="/image/visualstudio/msys2_shell_use_full_path.cmd.png" alt="C:\msys64\msys2_shell.cmd -use-full-path"></p>
+<ol start="4">
+<li>다음 명령어를 입력합니다.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ cd tmp&#x2F;build</span><br><span class="line">$ mkdir ffmpeg</span><br><span class="line">$ cd ffmpeg</span><br><span class="line"></span><br><span class="line">$ CC&#x3D;cl .&#x2F;..&#x2F;..&#x2F;sources&#x2F;ffmpeg&#x2F;configure --prefix&#x3D;.&#x2F;..&#x2F;..&#x2F;installed --toolchain&#x3D;msvc --arch&#x3D;x86_64 --enable-yasm --enable-asm --enable-shared --disable-static --disable-programs --enable-avresample --enable-gpl  --extra-ldflags&#x3D;&quot;-LIBPATH:.&#x2F;..&#x2F;..&#x2F;installed&#x2F;lib&quot; --extra-cflags&#x3D;&quot;-I.&#x2F;..&#x2F;..&#x2F;installed&#x2F;include&#x2F;&quot;</span><br><span class="line"></span><br><span class="line">$ make V&#x3D;1 -j 8</span><br><span class="line">$ make install</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="결과-확인하기"><a href="#결과-확인하기" class="headerlink" title="결과 확인하기"></a>결과 확인하기</h2><p>C:\msys64\home\계정\tmp\installed\bin 경로에서 컴파일 결과를 확인합니다.</p>
+<p><img src="/image/ffmpeg/ffmpeg_bin.png" alt="ffmpeg-bin"></p>
+<p>Windows 환경에서 FFmpeg을 빌드하는 방법에 대해서 알아보았습니다.</p>
+
         </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://newtype0096.github.io/2021/04/01/Windows-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C-FFmpeg-%EC%BB%B4%ED%8C%8C%EC%9D%BC%ED%95%98%EA%B8%B0-MSVC/" data-id="ckmz20zju0000q64z1qn2c3hw" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "M-AHHH"
+        },
+        "headline": "Windows 환경에서 FFmpeg 컴파일하기 (MSVC)",
+        "image": "http://newtype0096.github.io/image/msys2/MSYS2_64bit_Setup.png",
+        "keywords": "",
+        "genre": "Open Source FFmpeg",
+        "datePublished": "2021-04-01",
+        "dateCreated": "2021-04-01",
+        "dateModified": "2021-04-02",
+        "url": "http://newtype0096.github.io/2021/04/01/Windows-환경에서-FFmpeg-컴파일하기-MSVC/",
+        "description": "Windows 환경에서 FFmpeg을 빌드하는 방법에 대해서 알아보도록 하겠습니다.
+출처: Compiling FFmpeg with X264 on Windows 10 using MSVC
+MSYS2 설치하기
+MSYS2 인스톨러를 다운로드 후 실행합니다.
+C:\msys64 경로에 설치합니다.
+
+
+
+x64 Native Tools Command Prompt for ",
+        "wordCount": 258
+    }
+</script>
+
+</article>
+
+    <section id="comments">
     
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+    </div>
 
 
-    </div></section>
+    
+    </section>
 
 
 
@@ -314,6 +391,19 @@ OpenSSL은 Eric A. Youn
     </div>
 	<div class="github-card" data-github="newtype0096" data-height="150" data-theme="default"></div>
 	<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2020/03/08/Windows-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C-SSL-TLS%EB%A5%BC-%EC%A7%80%EC%9B%90%ED%95%98%EB%8A%94-wsdl2h-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Windows 환경에서 SSL/TLS를 지원하는 wsdl2h.exe 빌드하기</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -452,11 +542,13 @@ OpenSSL은 Eric A. Youn
     var disqus_shortname = 'mtcbwy';
     
     
+    var disqus_url = 'http://newtype0096.github.io/2021/04/01/Windows-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C-FFmpeg-%EC%BB%B4%ED%8C%8C%EC%9D%BC%ED%95%98%EA%B8%B0-MSVC/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
