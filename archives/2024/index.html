@@ -173,7 +173,7 @@
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://newtype0096.github.io/2024/11/19/hello-world/">0</span>
+        <span><a href="http://newtype0096.github.io/2024/11/19/hello-world/#isso-thread"></a></span>
     
 </span>
 
@@ -334,18 +334,19 @@ Quick
     </div>
     
     
-    <script>
-    var disqus_shortname = 'hexo-theme-hueman';
-    
-    
-    (function() {
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-    </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    var gitalk = new Gitalk({
+        clientID: 'Ov23li1DvIXe6lx7LOoZ',
+        clientSecret: 'ff545e100126a90d1cf6c6285c724514c6f222a3',
+        id: '280e9765b7dfdb46076ca43b8191e5ea',
+        repo: 'newtype0096.github.io',
+        owner: 'newtype0096',
+        admin: "newtype0096"
+    })
+    gitalk.render('comment-container')
+</script>
 
 
 

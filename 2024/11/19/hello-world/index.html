@@ -306,9 +306,7 @@ Quick",
     <section id="comments">
     
         
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
+<div id="comment-container"></div>
 
 
     
@@ -442,20 +440,19 @@ Quick",
     </div>
     
     
-    <script>
-    var disqus_shortname = 'hexo-theme-hueman';
-    
-    
-    var disqus_url = 'http://newtype0096.github.io/2024/11/19/hello-world/';
-    
-    (function() {
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-    </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    var gitalk = new Gitalk({
+        clientID: 'Ov23li1DvIXe6lx7LOoZ',
+        clientSecret: 'ff545e100126a90d1cf6c6285c724514c6f222a3',
+        id: '1f8f0395f47842dff7dd8d45de732e80',
+        repo: 'newtype0096.github.io',
+        owner: 'newtype0096',
+        admin: "newtype0096"
+    })
+    gitalk.render('comment-container')
+</script>
 
 
 
