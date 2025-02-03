@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>newtype0096&#39;s Blog</title>
+  
+  <subtitle>개발 사전</subtitle>
+  <link href="http://newtype0096.github.io/feed.xml" rel="self"/>
+  
+  <link href="http://newtype0096.github.io/"/>
+  <updated>2025-02-03T12:26:21.724Z</updated>
+  <id>http://newtype0096.github.io/</id>
+  
+  <author>
+    <name>newtype0096</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Pull Request 작성기 - wpfui (2)</title>
+    <link href="http://newtype0096.github.io/2025/02/03/Pull-Request-%EC%9E%91%EC%84%B1%EA%B8%B0-wpfui-2/"/>
+    <id>http://newtype0096.github.io/2025/02/03/Pull-Request-%EC%9E%91%EC%84%B1%EA%B8%B0-wpfui-2/</id>
+    <published>2025-02-03T11:31:35.000Z</published>
+    <updated>2025-02-03T12:26:21.724Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2025/02/03/Pull-Request-%EC%9E%91%EC%84%B1%EA%B8%B0-wpfui-2/wpfui-logo.webp" alt="wpfui (https://github.com/lepoco/wpfui)"></p><h1 id="📬-GitHub-알림-뭐지"><a href="#📬-GitHub-알림-뭐지" class="headerlink" title="📬 GitHub 알림? 뭐지?"></a>📬 GitHub 알림? 뭐지?</h1><p>주말 아침, 평소처럼 늦잠 자려고 누워있는데…<br><strong>띠링!</strong><br>GitHub에서 메일이 왔다는 알림이 떴다.<br>뭔가 느낌이 왔다. 바로 메일을 열어보니…</p><p><img src="/2025/02/03/Pull-Request-%EC%9E%91%EC%84%B1%EA%B8%B0-wpfui-2/pr-2.png" alt="두둥"></p><h1 id="🎉-내-PR이-승인됐다"><a href="#🎉-내-PR이-승인됐다" class="headerlink" title="🎉 내 PR이 승인됐다!!"></a>🎉 내 PR이 승인됐다!!</h1><p><strong>헉!</strong><br>내가 제출했던 Pull Request가 <strong>Merge</strong>됐다는 게 아닌가! 😛<br>wpfui가 <strong>4.0.0</strong> 버전을 릴리즈하면서,<br>내가 수정한 SplitButton 스타일이 <strong>공식 반영</strong>된 거다!</p><p><img src="/2025/02/03/Pull-Request-%EC%9E%91%EC%84%B1%EA%B8%B0-wpfui-2/release-1.png" alt="wpfui-4.0.0"></p><h1 id="🌟Contributors-목록에-내-이름이"><a href="#🌟Contributors-목록에-내-이름이" class="headerlink" title="🌟Contributors 목록에 내 이름이?"></a>🌟Contributors 목록에 내 이름이?</h1><p>릴리즈 노트를 보니까,<br><strong>New Contributors</strong>에 내 깃허브 아이디가 딱! 박혀있었다.<br>이렇게 또 하나의 오픈소스 프로젝트에 기여하게 됐다는 게<br><strong>너무 뿌듯</strong>하고 기분이 좋았다. 😁</p><p><img src="/2025/02/03/Pull-Request-%EC%9E%91%EC%84%B1%EA%B8%B0-wpfui-2/contributor-1.png" alt="New Contributors에 포함된 내 깃허브 아이디"></p><h1 id="💭-기대했던-것-만큼-기쁘다"><a href="#💭-기대했던-것-만큼-기쁘다" class="headerlink" title="💭 기대했던 것 만큼 기쁘다!"></a>💭 기대했던 것 만큼 기쁘다!</h1><p>솔직히 <strong>반영될 것 같은데</strong> 하는 기대는 있었는데, 막상 Merge된 걸 보니까 기분이 달랐다.<br>이번 경험 덕분에 오픈소스 기여에 대한 <strong>자신감</strong>도 더 생겼다.<br>앞으로도 이런 기회를 자주 만들어봐야겠다!</p><p><strong>🔥 다음 목표는 더 큰 프로젝트 기여!</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/2025/02/03/Pull-Request-%EC%9E%91%EC%84%B1%EA%B8%B0-wpfui-2/wpfui-logo.webp&quot; alt=&quot;wpfui (https://github.com/lepoco/wpfui)&quot;&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="GitHub" scheme="http://newtype0096.github.io/categories/GitHub/"/>
+    
+    <category term="Contributing" scheme="http://newtype0096.github.io/categories/GitHub/Contributing/"/>
+    
+    
+    <category term="wpfui" scheme="http://newtype0096.github.io/tags/wpfui/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pull Request 작성기 - wpfui (1)</title>
+    <link href="http://newtype0096.github.io/2024/12/26/Pull-Request-%EC%9E%91%EC%84%B1%EA%B8%B0-wpfui-1/"/>
+    <id>http://newtype0096.github.io/2024/12/26/Pull-Request-%EC%9E%91%EC%84%B1%EA%B8%B0-wpfui-1/</id>
+    <published>2024-12-26T13:57:26.000Z</published>
+    <updated>2025-02-03T12:26:45.471Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2024/12/26/Pull-Request-%EC%9E%91%EC%84%B1%EA%B8%B0-wpfui-1/wpfui-logo.webp" alt="wpfui (https://github.com/lepoco/wpfui)"></p><h1 id="🛠️-‘wpfui’와의-첫-만남"><a href="#🛠️-‘wpfui’와의-첫-만남" class="headerlink" title="🛠️ ‘wpfui’와의 첫 만남"></a>🛠️ ‘wpfui’와의 첫 만남</h1><p>최근 토이 프로젝트를 하면서 <strong>UI 라이브러리</strong>를 찾다가 ‘<strong>wpfui</strong>‘라는 것을 알게 됐다.<br>WPF에서 <strong>Fluent Design System</strong> 스타일의 컨트롤을 쓸 수 있게 해주는 아주 좋은 라이브러리다.</p><p>디자인도 깔끔하고 기능도 괜찮아 보여서 바로 사용 시작!<br>한참 잘 쓰다가…</p><h1 id="🤨-SplitButton의-미묘한-불편함-발견"><a href="#🤨-SplitButton의-미묘한-불편함-발견" class="headerlink" title="🤨 SplitButton의 미묘한 불편함 발견"></a>🤨 SplitButton의 미묘한 불편함 발견</h1><p>문제의 컨트롤은 <strong>SplitButton</strong>.<br>토글 버튼을 클릭하면 Flyout(팝업 메뉴)이 나와야하는데, <strong>간간히 메인 버튼의 커맨드가 실행됐다</strong>.</p><p>“내가 뭔가 잘못 썼나?”<br>처음엔 내 코드 문제인 줄 알고 디버깅했는데, 아무리 봐도 라이브러리 자체가 이상한 것 같았다.<br>그래서 <strong>wpfui</strong> 코드를 직접 까보니…</p><h2 id="🚨-버튼의-특정-부분을-클릭해야만-Flyout이-열리는-상황이었다"><a href="#🚨-버튼의-특정-부분을-클릭해야만-Flyout이-열리는-상황이었다" class="headerlink" title="🚨 버튼의 특정 부분을 클릭해야만 Flyout이 열리는 상황이었다!"></a>🚨 버튼의 특정 부분을 클릭해야만 Flyout이 열리는 상황이었다!</h2><p>즉, <strong>버튼의 텍스트 영역(아래 빨간 부분)</strong> 을 클릭해야만 Flyout이 정상적으로 열리는 거다.</p><h3 id="📌-문제-화면"><a href="#📌-문제-화면" class="headerlink" title="📌 문제 화면:"></a>📌 문제 화면:</h3><p><img src="/2024/12/26/Pull-Request-%EC%9E%91%EC%84%B1%EA%B8%B0-wpfui-1/flyout-1.png" alt="토글버튼의 빨간 영역을 클릭해야만 Flyout이 나타난다."></p><p>와… 이건 좀 아니다 싶었다.<br>일반적인 UI 기대 동작과도 다르고, 실제로 써보면 너무 불편하다.</p><h1 id="✍️-스타일-수정-그리고-속이-시원해짐"><a href="#✍️-스타일-수정-그리고-속이-시원해짐" class="headerlink" title="✍️ 스타일 수정, 그리고 속이 시원해짐"></a>✍️ 스타일 수정, 그리고 속이 시원해짐</h1><p>결국 직접 <strong>스타일을 수정</strong>하기로 했다.<br>버튼의 특정 부분에서만 트리거되던 걸 <strong>버튼 어디를 클릭하든 Flyout이 열리게 변경!</strong></p><h3 id="📌-수정-후-화면"><a href="#📌-수정-후-화면" class="headerlink" title="📌 수정 후 화면:"></a>📌 수정 후 화면:</h3><p><img src="/2024/12/26/Pull-Request-%EC%9E%91%EC%84%B1%EA%B8%B0-wpfui-1/flyout-2.png" alt="이제 토글버튼의 어디든 클릭하면 Flyout이 나타난다."></p><p>이제야 좀 자연스러운(?)동작이 됐다.</p><h1 id="🚀-Pull-Request-도전-오픈소스-기여-GO"><a href="#🚀-Pull-Request-도전-오픈소스-기여-GO" class="headerlink" title="🚀 Pull Request 도전! 오픈소스 기여 GO"></a>🚀 Pull Request 도전! 오픈소스 기여 GO</h1><p>수정하면서 문득 <strong>“이거 나만 불편한 게 아닐 텐데?”</strong> 싶어서,<br>혹시 같은 문제를 겪은 사람이 있는지 <strong>wpfui의 GitHub Issue</strong>를 확인해 봤다.</p><p>…역시나! 🤣<br>이미 동일한 문제가 제기된 이슈가 있었고, 해결되지 않고 있었다.</p><p>이럴 때가 바로 <strong>Pull Request(Pull 요청, PR) 때다!</strong><br>바로 해당 Issue를 참조하면서 PR을 작성하고 올렸다.</p><h3 id="📌-PR-화면"><a href="#📌-PR-화면" class="headerlink" title="📌 PR 화면:"></a>📌 PR 화면:</h3><p><img src="/2024/12/26/Pull-Request-%EC%9E%91%EC%84%B1%EA%B8%B0-wpfui-1/pr-1.png" alt="PR 템플릿이 잘 되어있다."></p><h1 id="⏳-이제-Merge를-기다리며…"><a href="#⏳-이제-Merge를-기다리며…" class="headerlink" title="⏳ 이제 Merge를 기다리며…"></a>⏳ 이제 Merge를 기다리며…</h1><p>PR을 보냈으니 이제 Maintainer의 리뷰를 기다려야 한다.<br>그런데 보니까… <strong>이미 PR이 잔뜩 쌓여있음</strong>. 😅<br>언제 Merge될지 모르겠지만, 꼭 반영돼서 <strong>이런 큰 오픈소스 프로젝트의 Contributors</strong> 목록에 내 아이디가 박히면 좋겠다!</p><p>🔥 <strong>Merge될 때까지 기다려보자!</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/2024/12/26/Pull-Request-%EC%9E%91%EC%84%B1%EA%B8%B0-wpfui-1/wpfui-logo.webp&quot; alt=&quot;wpfui (https://github.com/lepoco/wpfui)&quot;&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="GitHub" scheme="http://newtype0096.github.io/categories/GitHub/"/>
+    
+    <category term="Contributing" scheme="http://newtype0096.github.io/categories/GitHub/Contributing/"/>
+    
+    
+    <category term="wpfui" scheme="http://newtype0096.github.io/tags/wpfui/"/>
+    
+  </entry>
+  
+</feed>
