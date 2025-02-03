@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    
+
+    
+    <title>Pull Request 작성기 - wpfui (1) | newtype0096&#39;s Blog</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="" />
+    
+    <meta name="description" content="🛠️ ‘wpfui’와의 첫 만남최근 토이 프로젝트를 하면서 UI 라이브러리를 찾다가 ‘wpfui‘라는 것을 알게 됐다.WPF에서 Fluent Design System 스타일의 컨트롤을 쓸 수 있게 해주는 아주 좋은 라이브러리다. 디자인도 깔끔하고 기능도 괜찮아 보여서 바로 사용 시작!한참 잘 쓰다가… 🤨 SplitButton의 미묘한 불편함 발견문제의">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pull Request 작성기 - wpfui (1)">
+<meta property="og:url" content="http://newtype0096.github.io/2024/12/26/Pull-Request-%EC%9E%91%EC%84%B1%EA%B8%B0-wpfui-1/index.html">
+<meta property="og:site_name" content="newtype0096&#39;s Blog">
+<meta property="og:description" content="🛠️ ‘wpfui’와의 첫 만남최근 토이 프로젝트를 하면서 UI 라이브러리를 찾다가 ‘wpfui‘라는 것을 알게 됐다.WPF에서 Fluent Design System 스타일의 컨트롤을 쓸 수 있게 해주는 아주 좋은 라이브러리다. 디자인도 깔끔하고 기능도 괜찮아 보여서 바로 사용 시작!한참 잘 쓰다가… 🤨 SplitButton의 미묘한 불편함 발견문제의">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="http://newtype0096.github.io/2024/12/26/Pull-Request-%EC%9E%91%EC%84%B1%EA%B8%B0-wpfui-1/wpfui-logo.webp">
+<meta property="article:published_time" content="2024-12-26T13:57:26.000Z">
+<meta property="article:modified_time" content="2025-02-03T11:10:36.819Z">
+<meta property="article:author" content="newtype0096">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://newtype0096.github.io/2024/12/26/Pull-Request-%EC%9E%91%EC%84%B1%EA%B8%B0-wpfui-1/wpfui-logo.webp">
+    
+
+    
+
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/titillium-web/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+<script src="/libs/jquery/3.5.0/jquery.min.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+    
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">홈</a>
+                                </li>
+                            
+                                    <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/GitHub/">GitHub</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/GitHub/Contributing/">Contributing</a></li></ul></li></ul>
+                                
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="검색" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="찾고자 하는 포스트를 검색하세요." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '포스트',
+            PAGES: '페이지',
+            CATEGORIES: '카테고리',
+            TAGS: '태그',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/GitHub/">GitHub</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/GitHub/Contributing/">Contributing</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-Pull-Request-작성기-wpfui-1" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Pull Request 작성기 - wpfui (1)
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2024/12/26/Pull-Request-%EC%9E%91%EC%84%B1%EA%B8%B0-wpfui-1/" class="article-date">
+       <time datetime="2024-12-26T13:57:26.000Z" itemprop="datePublished">2024-12-26</time>
+    </a>
+  </div>
+
+
+<div class="article-date">
+  <i class="fa fa-calendar-plus-o"></i>
+  <a href="/2024/12/26/Pull-Request-%EC%9E%91%EC%84%B1%EA%B8%B0-wpfui-1/" class="article-date">
+     <time datetime="2025-02-03T11:10:36.819Z" itemprop="dateModified">2025-02-03</time>
+  </a>
+</div>
+
+
+                
+
+                
+                
+
+                
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+
+            
+
+            
+
+            <p><img src="/2024/12/26/Pull-Request-%EC%9E%91%EC%84%B1%EA%B8%B0-wpfui-1/wpfui-logo.webp" alt="wpfui (https://github.com/lepoco/wpfui)"></p>
+<h1 id="🛠️-‘wpfui’와의-첫-만남"><a href="#🛠️-‘wpfui’와의-첫-만남" class="headerlink" title="🛠️ ‘wpfui’와의 첫 만남"></a>🛠️ ‘wpfui’와의 첫 만남</h1><p>최근 토이 프로젝트를 하면서 <strong>UI 라이브러리</strong>를 찾다가 ‘<strong>wpfui</strong>‘라는 것을 알게 됐다.<br>WPF에서 <strong>Fluent Design System</strong> 스타일의 컨트롤을 쓸 수 있게 해주는 아주 좋은 라이브러리다.</p>
+<p>디자인도 깔끔하고 기능도 괜찮아 보여서 바로 사용 시작!<br>한참 잘 쓰다가…</p>
+<h1 id="🤨-SplitButton의-미묘한-불편함-발견"><a href="#🤨-SplitButton의-미묘한-불편함-발견" class="headerlink" title="🤨 SplitButton의 미묘한 불편함 발견"></a>🤨 SplitButton의 미묘한 불편함 발견</h1><p>문제의 컨트롤은 <strong>SplitButton</strong>.<br>토글 버튼을 클릭하면 Flyout(팝업 메뉴)이 나와야하는데, <strong>간간히 메인 버튼의 커맨드가 실행됐다</strong>.</p>
+<p>“내가 뭔가 잘못 썼나?”<br>처음엔 내 코드 문제인 줄 알고 디버깅했는데, 아무리 봐도 라이브러리 자체가 이상한 것 같았다.<br>그래서 <strong>wpfui</strong> 코드를 직접 까보니…</p>
+<h2 id="🚨-버튼의-특정-부분을-클릭해야만-Flyout이-열리는-상황이었다"><a href="#🚨-버튼의-특정-부분을-클릭해야만-Flyout이-열리는-상황이었다" class="headerlink" title="🚨 버튼의 특정 부분을 클릭해야만 Flyout이 열리는 상황이었다!"></a>🚨 버튼의 특정 부분을 클릭해야만 Flyout이 열리는 상황이었다!</h2><p>즉, <strong>버튼의 텍스트 영역(아래 빨간 부분)</strong> 을 클릭해야만 Flyout이 정상적으로 열리는 거다.</p>
+<h3 id="📌-문제-화면"><a href="#📌-문제-화면" class="headerlink" title="📌 문제 화면:"></a>📌 문제 화면:</h3><p><img src="/2024/12/26/Pull-Request-%EC%9E%91%EC%84%B1%EA%B8%B0-wpfui-1/flyout-1.png" alt="토글버튼의 빨간 영역을 클릭해야만 Flyout이 나타난다."></p>
+<p>와… 이건 좀 아니다 싶었다.<br>일반적인 UI 기대 동작과도 다르고, 실제로 써보면 너무 불편하다.</p>
+<h1 id="✍️-스타일-수정-그리고-속이-시원해짐"><a href="#✍️-스타일-수정-그리고-속이-시원해짐" class="headerlink" title="✍️ 스타일 수정, 그리고 속이 시원해짐"></a>✍️ 스타일 수정, 그리고 속이 시원해짐</h1><p>결국 직접 <strong>스타일을 수정</strong>하기로 했다.<br>버튼의 특정 부분에서만 트리거되던 걸 <strong>버튼 어디를 클릭하든 Flyout이 열리게 변경!</strong></p>
+<h3 id="📌-수정-후-화면"><a href="#📌-수정-후-화면" class="headerlink" title="📌 수정 후 화면:"></a>📌 수정 후 화면:</h3><p><img src="/2024/12/26/Pull-Request-%EC%9E%91%EC%84%B1%EA%B8%B0-wpfui-1/flyout-2.png" alt="이제 토글버튼의 어디든 클릭하면 Flyout이 나타난다."></p>
+<p>이제야 좀 자연스러운(?)동작이 됐다.</p>
+<h1 id="🚀-Pull-Request-도전-오픈소스-기여-GO"><a href="#🚀-Pull-Request-도전-오픈소스-기여-GO" class="headerlink" title="🚀 Pull Request 도전! 오픈소스 기여 GO"></a>🚀 Pull Request 도전! 오픈소스 기여 GO</h1><p>수정하면서 문득 <strong>“이거 나만 불편한 게 아닐 텐데?”</strong> 싶어서,<br>혹시 같은 문제를 겪은 사람이 있는지 <strong>wpfui의 GitHub Issue</strong>를 확인해 봤다.</p>
+<p>…역시나! 🤣<br>이미 동일한 문제가 제기된 이슈가 있었고, 해결되지 않고 있었다.</p>
+<p>이럴 때가 바로 <strong>Pull Request(Pull 요청, PR) 때다!</strong><br>바로 해당 Issue를 참조하면서 PR을 작성하고 올렸다.</p>
+<h3 id="📌-PR-화면"><a href="#📌-PR-화면" class="headerlink" title="📌 PR 화면:"></a>📌 PR 화면:</h3><p><img src="/2024/12/26/Pull-Request-%EC%9E%91%EC%84%B1%EA%B8%B0-wpfui-1/pr-1.png" alt="PR 템플릿이 잘 되어있다."></p>
+<h1 id="⏳-이제-Merge를-기다리며…"><a href="#⏳-이제-Merge를-기다리며…" class="headerlink" title="⏳ 이제 Merge를 기다리며…"></a>⏳ 이제 Merge를 기다리며…</h1><p>PR을 보냈으니 이제 Maintainer의 리뷰를 기다려야 한다.<br>그런데 보니까… <strong>이미 PR이 잔뜩 쌓여있음</strong>. 😅<br>언제 Merge될지 모르겠지만, 꼭 반영돼서 <strong>이런 큰 오픈소스 프로젝트의 Contributors</strong> 목록에 내 아이디가 박히면 좋겠다!</p>
+<p>🔥 <strong>Merge될 때까지 기다려보자!</strong></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://newtype0096.github.io/2024/12/26/Pull-Request-%EC%9E%91%EC%84%B1%EA%B8%B0-wpfui-1/" data-id="cm6oybsct0000rkui3k0h8kbu" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "newtype0096"
+        },
+        "headline": "Pull Request 작성기 - wpfui (1)",
+        "image": "http://newtype0096.github.io/2024/12/26/Pull-Request-%EC%9E%91%EC%84%B1%EA%B8%B0-wpfui-1/wpfui-logo.webp",
+        "keywords": "",
+        "genre": "GitHub Contributing",
+        "datePublished": "2024-12-26",
+        "dateCreated": "2024-12-26",
+        "dateModified": "2025-02-03",
+        "url": "http://newtype0096.github.io/2024/12/26/Pull-Request-작성기-wpfui-1/",
+        "description": "
+🛠️ ‘wpfui’와의 첫 만남최근 토이 프로젝트를 하면서 UI 라이브러리를 찾다가 ‘wpfui‘라는 것을 알게 됐다.WPF에서 Fluent Design System 스타일의 컨트롤을 쓸 수 있게 해주는 아주 좋은 라이브러리다.
+디자인도 깔끔하고 기능도 괜찮아 보여서 바로 사용 시작!한참 잘 쓰다가…
+🤨 SplitButton의 미묘한 불편함 발견문제의",
+        "wordCount": 301
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+<div id="comment-container"></div>
+
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>팔로우:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/newtype0096" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">최근 글</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2024/12/26/Pull-Request-%EC%9E%91%EC%84%B1%EA%B8%B0-wpfui-1/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/2024/12/26/Pull-Request-%EC%9E%91%EC%84%B1%EA%B8%B0-wpfui-1/wpfui-logo.webp)" alt="Pull Request 작성기 - wpfui (1)" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/GitHub/">GitHub</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/GitHub/Contributing/">Contributing</a></p>
+                            <p class="item-title"><a href="/2024/12/26/Pull-Request-%EC%9E%91%EC%84%B1%EA%B8%B0-wpfui-1/" class="title">Pull Request 작성기 - wpfui (1)</a></p>
+                            <p class="item-date"><time datetime="2024-12-26T13:57:26.000Z" itemprop="datePublished">2024-12-26</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">카테고리</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/GitHub/">GitHub</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/GitHub/Contributing/">Contributing</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">아카이브</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/12/">12월 2024</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">링크</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2025 newtype0096</p>
+                
+                <p>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="https://github.com/ppoffice" target="_blank">PPOffice</a></p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    var gitalk = new Gitalk({
+        clientID: 'Ov23li1DvIXe6lx7LOoZ',
+        clientSecret: 'ff545e100126a90d1cf6c6285c724514c6f222a3',
+        id: '5ebdf7e7d0d06b62c150ca05e545bf5c',
+        repo: 'newtype0096.github.io',
+        owner: 'newtype0096',
+        admin: "newtype0096"
+    })
+    gitalk.render('comment-container')
+</script>
+
+
+
+
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+
+    
+    
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+</body>
+</html>
