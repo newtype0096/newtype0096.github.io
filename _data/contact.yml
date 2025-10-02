@@ -1,7 +1,16 @@
 #  The contact options.
 
+- type: home
+  icon: 'fas fa-house'
+  url:  "https://newtype0096.github.io/"
+  noblank : true
+
 - type: github
   icon: "fab fa-github"
+
+- type: resume
+  icon: 'fas fa-circle-user'
+  url:  "https://portfolio-tau-virid-88.vercel.app/"
 
 # - type: twitter
   # icon: "fa-brands fa-x-twitter"
@@ -12,7 +21,7 @@
 
 - type: rss
   icon: "fas fa-rss"
-  noblank: true
+
 # Uncomment and complete the url below to enable more contact options
 #
 # - type: mastodon
