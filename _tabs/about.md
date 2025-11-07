@@ -9,8 +9,9 @@ order: 4
 [![hits](https://myhits.vercel.app/api/hit/https%3A%2F%2Fgithub.com%2Fnewtype0096?color=blue&label=hits&size=small)](https://myhits.vercel.app)
 
 ## 🏢 Work Experiences
-- 📡 **Hancom Inspace**, Software Platform Development Team (2023.12 ~ )
-- 🖥️ **RealHub**, Development Divison (2018.06 ~ 2023.12)
+- 🖥️ **RealHub**, Research Institute (2025.11 ~ )
+- 📡 **Hancom Inspace**, Software Platform Development Division (2023.12 ~ 2025.10)
+- 🖥️ **RealHub**, Development Division (2018.06 ~ 2023.12)
 
 <h2>🛠️ Tech Skills</h2>
 
